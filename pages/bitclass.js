@@ -1,19 +1,26 @@
+import Head from 'next/head';
+import Image from 'next/image';
+
 export default function BitClass() {
     return (
         <>
-            <body className="-mb-10 font-sans text-white bg-black">
+            <Head>
+                <title>BitClass Case Study</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
+            <body className="-mb-10 font-sans text-white bg-black scroll-smooth">
                 <section className="w-3/4 pb-10 mx-auto">
                     <div className="flex flex-col-reverse items-center justify-center pt-10 md:flex-row">
                         <h1 className="pt-10 text-4xl text-center md:mr-28">Product Teardown: BitClass</h1>
-                        <img src="./bitclass_2.jpg" className="object-cover rounded w-60 h-60" alt="bitclass"/>
+                        <Image src="/assets/bitclass_2.jpg" alt="BitClass" width={250} height={250} />
                     </div>
                     <div w-60 className="w-3/4 py-4 mx-auto my-4 border-b-2 md:py-8 "></div>
                     <div className="w-full mx-auto md:w-3/5 ">
-                        <h3 className="pt-4 text-3xl italic font-bold ">What does BitClass do?</h3>
+                        <h2 className="pt-4 text-3xl italic font-bold ">What does BitClass do?</h2>
                         <p className="pt-4 text-lg">BitClass enables teachers, tutors and skilled professionals to start their own live courses
                             for zero upfront costs. It provides a cohort based learning experience in different fields such as music,
                             art, dance, crypto, etc. </p>
-                        <h5 className="pt-4 text-xl italic font-medium">After a dive into the product, came across a few USP of  BitClass:</h5>
+                        <h3 className="pt-4 text-xl italic font-medium">After a dive into the product, came across a few USP of  BitClass:</h3>
                         <ul className="pt-4 pl-6 list-disc ">
                             <li className="py-2 text-lg">
                             Live courses with interactive student-teacher experience.
@@ -30,7 +37,7 @@ export default function BitClass() {
                                 providing them with growth, marketing and branding strategies, and a large audience of students.
                             </li>
                         </ul>
-                        <h3 className="pt-4 text-3xl italic font-semibold">The Problem Statement:</h3>
+                        <h2 className="pt-4 text-3xl italic font-semibold">The Problem Statement:</h2>
                         <p className="pt-4 pl-2 text-lg ">User Activation ⚡ - Given the free live classes & recorded properties present on
                             the app, design a user journey to "activate" all the new users within the first 7 days of signing-up on the app.
                             Activation here means doing at least one of the 3:</p>
@@ -46,19 +53,24 @@ export default function BitClass() {
                             </li>
                         </ul>
                         <div w-60 className="w-3/4 py-4 mx-auto my-4 border-b-2 md:py-4 "></div>
-                        <p className="pt-4 text-lg">Let's begin by sketching out a user persona - what are the kind of users use a product such as BitClass?</p>
+                        <p className="pt-4 text-lg">Let's begin by sketching out a user persona -
+                            what are the kind of users use a product such as BitClass?</p>
                     </div>
-                    <img src="./persona.jpg" className="object-cover pt-6 mx-auto md:w-3/4" alt="persona"/>
+                    <div className='flex justify-center pt-6 '>
+                        <Image src="/assets/persona.jpg" alt="User Persona" width={700} height={450} quality="100"/>
+                    </div>
                     <div className="w-full py-4 mx-auto md:w-3/5 ">
-                        <h5 className="pt-4 text-3xl italic font-semibold">User Journey:</h5>
+                        <h3 className="pt-4 text-3xl italic font-semibold">User Journey:</h3>
                         <p className="pt-4 text-lg">A new user goes through a standard procedure of looking at which courses he/she likes
                             and then subsequently registering for a course by signing up through a mobile number or email address.</p>
                         <p className="pt-4 text-lg">Following which the user can go to the profile settings and select the topics
                             they would be interseted in.</p>
                     </div>
-                    <img src="./user_journey.jpg" className="object-cover pt-6 mx-auto md:w-3/4" alt="user journey"/>
+                    <div className='flex justify-center pt-6 '>
+                        <Image src="/assets/user_journey.jpg" alt="User Journey" width={1050} height={430} quality="100" />
+                    </div>
                     <div className="w-full py-4 mx-auto md:w-3/5 ">
-                        <p className="pt-4 text-lg">A few observations from the user journey:</p>
+                        <p className="pt-8 text-lg">A few observations from the user journey:</p>
                         <ul className="pt-4 pl-6 list-disc ">
                             <li className="py-2 text-lg">
                                 <p className="italic font-semibold">Personalied Recommendations don't exist:</p>Since choosing
@@ -71,16 +83,18 @@ export default function BitClass() {
                                 is no option for the user to search for a course or topic.
                             </li>
                         </ul>
-                        <h5 className="pt-4 text-3xl italic font-semibold">Possible Solutions:</h5>
-                        <h5 className="pt-4 text-xl italic font-semibold">1. User Journey Revamp:</h5>
+                        <h2 className="pt-4 text-3xl italic font-semibold">Possible Solutions:</h2>
+                        <h3 className="pt-4 text-xl italic font-semibold">1. User Journey Revamp:</h3>
                         <p className="pt-4 text-lg">By just reordering the screens during Signup the user can get personalized recommendations
                             for courses right on the Home page.</p>
                     </div>
-                    <img src="./user_journey_revamp.jpg" className="object-cover pt-6 mx-auto md:w-3/4" alt="user journey revamp"/>
+                    <div className='flex justify-center pt-6 '>
+                        <Image src="/assets/user_journey_revamp.jpg" alt="User Journey Revamp" width={1050} height={430} quality="100" />
+                    </div>
                     <div className="w-full py-4 mx-auto md:w-3/5 ">
-                        <p className="pt-4 text-lg">The user is asked to pick the topics he/she is interested in
+                        <p className="pt-8 text-lg">The user is asked to pick the topics he/she is interested in
                             during Signup, hence, the user can get personalized recommendations right on the Home page.</p>
-                        <h5 className="pt-4 text-xl italic font-semibold">2. Custom Notifications:</h5>
+                        <h3 className="pt-4 text-xl italic font-semibold">2. Custom Notifications:</h3>
                         <p className="pt-4 text-lg">Another method in which a personalized experience can be provided to the 
                             user is through sending them custom notifications.</p>
                         <p className="pt-4 text-lg">Example of a notification being received by an user:
@@ -98,7 +112,7 @@ export default function BitClass() {
                             Tap to Register for FREE!
                             </p>
                         </div>
-                        <h5 className="pt-4 text-xl italic font-semibold">3. User Points (Gamification):</h5>
+                        <h3 className="pt-4 text-xl italic font-semibold">3. User Points (Gamification):</h3>
                         <p className="pt-4 text-lg">Implement a points tracking section which provides adds points after accomplishing a milestone.</p>
 
                         <p className="pt-4 text-lg">Examples of milestones reached:
@@ -113,7 +127,7 @@ export default function BitClass() {
                                 </li>
                             </ul>
                         </div>
-                        <h5 className="pt-4 text-3xl italic font-semibold">Conclusion:</h5>
+                        <h2 className="pt-4 text-3xl italic font-semibold">Conclusion:</h2>
                         <p className="pt-4 text-lg">The objective  of all the above solutions are to increase activation.
                             The methods are mainly by reducing friction by personalizing the experience for the user or through
                             gamification where the user feels a sense of accomplishment each time he/she reaches a milestone.

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 
 export const Navbar = () => {
 
@@ -6,18 +7,18 @@ export const Navbar = () => {
     <>
       <nav className="flex items-center p-4 font-sans bg-black">
         <Link href="/">
-          <a className="flex ml-3 mr-auto md:ml-16">
-            <img src=".\website_logo_1.jpg" className="mx-3 w-14 h-14 md:w-20 md:h-20" alt="website_logo"/>
+          <a className="ml-3 mr-auto md:ml-16">
+            <Image src="/assets/website_logo_1.jpg" alt="Website Logo" width={70} height={70} />
           </a>
         </Link>
         <div className="flex ml-auto md:mr-12">
           <Link href="/">
-              <a className="px-4 py-2 text-xl tracking-wide text-white border-2 border-transparent rounded md:mx-4 hover:border-white hover:text-white">
+              <a className="px-4 py-2 text-xl tracking-wide text-white rounded focus-within:border-b-2 sm:border-2 sm:border-transparent md:mx-4 sm:hover:border-white hover:text-white">
               Home
               </a>
           </Link>
           <Link href="/about">
-              <a className="px-4 py-2 text-xl tracking-wide text-white border-2 border-transparent rounded md:mx-4 hover:border-white hover:text-white">
+              <a className="px-4 py-2 text-xl tracking-wide text-white rounded focus-within:border-b-2 sm:border-2 sm:border-transparent md:mx-4 sm:hover:border-white hover:text-white">
               About
               </a>
           </Link>
